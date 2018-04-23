@@ -3,7 +3,7 @@ package br.americo.myutil;
 import java.text.NumberFormat;
 import java.util.List;
 
-public class ValueUtil {
+public class MyConvertValue {
 
     public enum TpArredondamento {
         acima,

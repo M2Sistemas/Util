@@ -37,7 +37,7 @@ import java.util.zip.GZIPOutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-public class SystemUtil {
+public class MySystem {
 
     /**
      * @return numero aleatorio
@@ -138,6 +138,23 @@ public class SystemUtil {
 
                 return !(mobileInfo.getState() == NetworkInfo.State.DISCONNECTED && (reason == null || reason.equals("specificDisabled") || reason.equals("dataDisabled")));
             }
+        }
+
+        return false;
+    }
+
+    /**
+     * verifica se o pacote existe
+     */
+    public static boolean isPackageExisted(Context context, String targetPackage) {
+        List<PackageInfo> packages;
+        PackageManager pm = context.getPackageManager();
+
+        packages = pm.getInstalledPackages(0);
+
+        for (PackageInfo packageInfo : packages) {
+            if (packageInfo.packageName.equals(targetPackage))
+                return true;
         }
 
         return false;
@@ -333,23 +350,6 @@ public class SystemUtil {
 
         zis.close();
         fis.close();
-    }
-
-    /**
-     * verifica se o pacote existe
-     */
-    public static boolean isPackageExisted(Context context, String targetPackage) {
-        List<PackageInfo> packages;
-        PackageManager pm = context.getPackageManager();
-
-        packages = pm.getInstalledPackages(0);
-
-        for (PackageInfo packageInfo : packages) {
-            if (packageInfo.packageName.equals(targetPackage))
-                return true;
-        }
-
-        return false;
     }
 
     /**

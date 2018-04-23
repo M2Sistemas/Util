@@ -1,9 +1,9 @@
 package br.americo.myutil;
 
-public class CheckCpfCnpj {
+public class MyCheckCpfCnpj {
 
     public static boolean check(String documento) {
-        documento = Mask.unmask(documento);
+        documento = MyMask.unmask(documento);
 
         if (documento.length() == 11)
             return checkCPF(documento);

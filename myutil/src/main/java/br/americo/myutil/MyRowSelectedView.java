@@ -3,7 +3,7 @@ package br.americo.myutil;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class RowSelectedView {
+public class MyRowSelectedView {
 
     private static Map<String, Integer> mapRow = new LinkedHashMap<>();
 

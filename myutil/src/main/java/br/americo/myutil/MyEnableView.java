@@ -6,7 +6,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
-public class EnableView {
+public class MyEnableView {
 
     /**
      * @param view   campo

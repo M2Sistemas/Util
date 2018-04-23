@@ -7,7 +7,7 @@ import android.widget.EditText;
 
 import java.lang.ref.WeakReference;
 
-public class MaskPhoneNumber implements TextWatcher {
+public class MyMaskPhoneNumber implements TextWatcher {
 
     private final int MAX_LENGTH = 11;
 
@@ -18,7 +18,7 @@ public class MaskPhoneNumber implements TextWatcher {
     private String mLastBeforeText;
     private WeakReference<EditText> mWeakEditText;
 
-    public MaskPhoneNumber(WeakReference<EditText> weakEditText) {
+    public MyMaskPhoneNumber(WeakReference<EditText> weakEditText) {
         this.mWeakEditText = weakEditText;
     }
 

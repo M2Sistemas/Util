@@ -4,7 +4,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
-public abstract class Mask {
+public abstract class MyMask {
 
     /**
      * @param mask string com a mascara
@@ -25,7 +25,7 @@ public abstract class Mask {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String str = Mask.unmask(s.toString());
+                String str = MyMask.unmask(s.toString());
                 String mascara = "";
                 if (isUpdating) {
                     old = str;

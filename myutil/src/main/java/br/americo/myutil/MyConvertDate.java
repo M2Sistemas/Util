@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class DateUtil {
+public class MyConvertDate {
 
     public enum TpDate {
         banco,
