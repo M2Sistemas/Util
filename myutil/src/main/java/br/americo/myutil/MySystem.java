@@ -288,6 +288,19 @@ public class MySystem {
     }
 
     /**
+     * Converte arquivo para byte.
+     */
+    public static byte[] fileToByte(File file) throws Exception {
+        byte[] bytesArray = new byte[(int) file.length()];
+
+        FileInputStream fis = new FileInputStream(file);
+        fis.read(bytesArray); //read file into bytes[]
+        fis.close();
+
+        return bytesArray;
+    }
+
+    /**
      * Comprime string.
      */
     public static String compress(String str) throws IOException {
