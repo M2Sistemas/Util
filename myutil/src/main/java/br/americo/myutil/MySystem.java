@@ -341,7 +341,7 @@ public class MySystem {
     /**
      * Descomprime arquivo zip
      */
-    private static void decompressZip(String de, String para) throws Exception {
+    public static void decompressZip(String de, String para) throws Exception {
         FileInputStream fis = new FileInputStream(de);
         ZipInputStream zis = new ZipInputStream(new BufferedInputStream(fis));
         ZipEntry entry;
