@@ -123,6 +123,20 @@ public class MyConvertDate {
 
     /**
      * @param dataInicial data inicial
+     * @param dataFinal   data final
+     * @return dtInicial <= dataFinal
+     */
+    public static boolean dateTimeCompare(String dataInicial, String dataFinal) throws Exception {
+        DateFormat dtFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
+
+        Date dtInicial = dtFormat.parse(dataInicial);
+        Date dtFinal = dtFormat.parse(dataFinal);
+
+        return (dtInicial.compareTo(dtFinal) <= 0);
+    }
+
+    /**
+     * @param dataInicial data inicial
      * @param dataMeio    data meio
      * @param dataFinal   data final
      * @return dataMeio >= dataInicial && dataMeio <= dataFinal
@@ -150,6 +164,22 @@ public class MyConvertDate {
 
         calendar.setTime(dtUm);
         calendar.add(Calendar.DATE, dias);
+
+        return dtFormat.format(calendar.getTime());
+    }
+    /**
+     * @param data data inicial
+     * @param horas quantidade de horas
+     * @return data final
+     */
+    public static String dateTimeSumHours(String data, int horas) throws Exception {
+        Calendar calendar = Calendar.getInstance();
+        DateFormat dtFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
+
+        Date dtUm = dtFormat.parse(data);
+
+        calendar.setTime(dtUm);
+        calendar.add(Calendar.HOUR_OF_DAY, horas);
 
         return dtFormat.format(calendar.getTime());
     }
