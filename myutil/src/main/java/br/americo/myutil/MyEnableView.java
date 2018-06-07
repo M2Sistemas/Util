@@ -15,8 +15,7 @@ public class MyEnableView {
     public static void campos(View view, boolean status) {
         if (view instanceof EditText) {
             EditText edt = (EditText) view;
-            edt.setEnabled(status);
-            edt.setCursorVisible(status);
+            edt.setClickable(status);
             edt.setFocusable(status);
             edt.setFocusableInTouchMode(status);
         } else if (view instanceof ImageButton) {
