@@ -26,6 +26,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.text.Normalizer;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -52,9 +54,7 @@ public class MySystem {
      * @return id unico com base na data
      */
     public static String generateId() {
-        SimpleDateFormat dtFormat = new SimpleDateFormat("yyyyMMddHHmmssSS", Locale.getDefault());
-
-        return dtFormat.format(new Date());
+        return new SimpleDateFormat("yyyyMMddHHmmssSSS", Locale.getDefault()).format(new Date());
     }
 
     /**
