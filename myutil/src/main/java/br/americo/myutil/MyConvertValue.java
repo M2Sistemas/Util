@@ -1,7 +1,10 @@
 package br.americo.myutil;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 public class MyConvertValue {
 
@@ -52,6 +55,26 @@ public class MyConvertValue {
             valor = part[0];
 
         return valor;
+    }
+
+    /**
+     * @param valor Double com valor
+     * @param casas quantidade de casas decimais
+     * @return String com valor
+     */
+    public static String doubleToString(double valor, int casas) {
+        StringBuilder stb = new StringBuilder();
+        stb.append("###,##0.");
+
+        for (int x = 0; x < casas; x++) {
+            stb.append("0");
+        }
+
+        DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(new Locale("pt", "BR"));
+
+        DecimalFormat df = new DecimalFormat(stb.toString(), otherSymbols);
+
+        return df.format(valor);
     }
 
     /**
