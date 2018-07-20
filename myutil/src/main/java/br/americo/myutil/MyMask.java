@@ -1,6 +1,7 @@
 package br.americo.myutil;
 
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
@@ -11,7 +12,15 @@ public abstract class MyMask {
      * @return remove a mascara
      */
     public static String unmask(String mask) {
-        return mask.replaceAll("[.]", "").replaceAll("[-]", "").replaceAll("[/]", "").replaceAll("[(]", "").replaceAll("[)]", "");
+        if (!TextUtils.isEmpty(mask)) {
+            mask = mask.replaceAll("[.]", "");
+            mask = mask.replaceAll("[-]", "");
+            mask = mask.replaceAll("[/]", "");
+            mask = mask.replaceAll("[(]", "");
+            mask = mask.replaceAll("[)]", "");
+        }
+
+        return mask;
     }
 
     /**
