@@ -169,7 +169,7 @@ public class MySystem {
 
             trata = Normalizer.normalize(trata, Normalizer.Form.NFD);
             trata = trata.replaceAll("[^\\p{ASCII}]", "");
-            trata = trata.replaceAll(";", ".");
+            trata = trata.replaceAll(";", ".").toUpperCase();
         }
 
         return trata;
