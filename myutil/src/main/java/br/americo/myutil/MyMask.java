@@ -17,7 +17,7 @@ public abstract class MyMask {
             mask = mask.replaceAll("[-]", "");
             mask = mask.replaceAll("[/]", "");
             mask = mask.replaceAll("[(]", "");
-            mask = mask.replaceAll("[)]", "");
+            mask = mask.replaceAll("[)]", "").trim();
         }
 
         return mask;
