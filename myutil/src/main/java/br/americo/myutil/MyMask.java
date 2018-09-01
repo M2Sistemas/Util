@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
+@SuppressWarnings("unused")
 public abstract class MyMask {
 
     /**

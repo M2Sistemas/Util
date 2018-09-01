@@ -1,12 +1,12 @@
 package br.americo.myutil;
 
-
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
 import java.lang.ref.WeakReference;
 
+@SuppressWarnings("unused")
 public class MyMaskPhoneNumber implements TextWatcher {
 
     private final int MAX_LENGTH = 11;

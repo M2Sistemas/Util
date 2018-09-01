@@ -6,6 +6,7 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 
+@SuppressWarnings("unused")
 public class MyConvertValue {
 
     public enum TpArredondamento {

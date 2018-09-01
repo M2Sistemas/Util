@@ -1,5 +1,6 @@
 package br.americo.myutil;
 
+@SuppressWarnings("unused")
 public class MyCheckCpfCnpj {
 
     public static boolean check(String documento) {

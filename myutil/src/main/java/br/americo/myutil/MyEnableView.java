@@ -6,6 +6,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
+@SuppressWarnings("unused")
 public class MyEnableView {
 
     /**

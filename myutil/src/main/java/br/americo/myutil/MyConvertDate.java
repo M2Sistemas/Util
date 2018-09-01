@@ -8,6 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+@SuppressWarnings("unused")
 public class MyConvertDate {
 
     public enum TpDate {
@@ -127,7 +128,7 @@ public class MyConvertDate {
      * @return dtInicial <= dataFinal
      */
     public static boolean dateTimeCompare(String dataInicial, String dataFinal) throws Exception {
-        DateFormat dtFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
+        DateFormat dtFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
 
         Date dtInicial = dtFormat.parse(dataInicial);
         Date dtFinal = dtFormat.parse(dataFinal);
