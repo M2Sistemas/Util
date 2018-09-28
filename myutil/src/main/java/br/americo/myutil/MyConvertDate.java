@@ -175,7 +175,7 @@ public class MyConvertDate {
      */
     public static String dateTimeSumHours(String data, int horas) throws Exception {
         Calendar calendar = Calendar.getInstance();
-        DateFormat dtFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
+        DateFormat dtFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
 
         Date dtUm = dtFormat.parse(data);
 
