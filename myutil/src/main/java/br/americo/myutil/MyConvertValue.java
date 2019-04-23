@@ -1,5 +1,6 @@
 package br.americo.myutil;
 
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
@@ -82,7 +83,7 @@ public class MyConvertValue {
      * @param valor            Double com valor
      * @param casas            quantidade de casas decimais
      * @param tpArredondamento cima/baixo
-     * @return String com valor
+     * @return Double com valor
      */
     public static double arredondar(double valor, int casas, TpArredondamento tpArredondamento) {
         double arredondado = valor;
@@ -96,6 +97,18 @@ public class MyConvertValue {
         arredondado /= (Math.pow(10, casas));
 
         return arredondado;
+    }
+
+    /**
+     * @param valor Double com valor
+     * @return Double com valor
+     */
+    public static double arredondar(int casas, double valor) {
+        BigDecimal bd = new BigDecimal(valor);
+
+        bd = bd.setScale(casas, BigDecimal.ROUND_HALF_UP);
+
+        return bd.doubleValue();
     }
 
     /**
