@@ -101,9 +101,10 @@ public class MyConvertValue {
 
     /**
      * @param valor Double com valor
+     * @param casas quantidade de casas decimais
      * @return Double com valor
      */
-    public static double arredondar(int casas, double valor) {
+    public static double arredondar(double valor, int casas) {
         BigDecimal bd = new BigDecimal(valor);
 
         bd = bd.setScale(casas, BigDecimal.ROUND_HALF_UP);
