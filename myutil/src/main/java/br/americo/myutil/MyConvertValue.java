@@ -80,6 +80,19 @@ public class MyConvertValue {
     }
 
     /**
+     * @param valor  Double com valor
+     * @param casas  quantidade de casas decimais
+     * @param locate formato do valor
+     * @return String com valor
+     */
+    public static String doubleToString(double valor, int casas, Locale locate) {
+        DecimalFormat df = new DecimalFormat("0", DecimalFormatSymbols.getInstance(locate));
+        df.setMaximumFractionDigits(casas);
+
+        return df.format(valor);
+    }
+
+    /**
      * @param valor            Double com valor
      * @param casas            quantidade de casas decimais
      * @param tpArredondamento cima/baixo
